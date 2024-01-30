@@ -371,11 +371,11 @@ nav {
 }
 #footer h1 {
   font-size: 20vw;
-  margin: 0 auto;
+  z-index: 99;
 }
 
 #footer-div {
-  height: 30vh;
+  height: 20vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -383,28 +383,94 @@ nav {
   align-items: center;
 }
 
-#fd1 h2{
+#fd1 h2 {
   font-size: 2vw;
   cursor: pointer;
   position: relative;
   z-index: 100;
 }
 
-#fd2 input{
+#fd2 input {
   border: none;
-  border-bottom: 1px solid grey;
   color: gray;
   background: transparent;
 }
 
-#fd2 button{
+#fd2 button {
   background: transparent;
   color: grey;
   border: none;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#fd2 #border {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
 }
 
 #footer-bottom {
   border-top: 1px solid #666666;
   height: 10vh;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5vw 0;
+}
+
+/*  GOOEY 1 & 2   */
+
+#footer #gooey1 {
+  height: 40vw;
+  width: 40vw;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #ff2a00, #ff7700);
+  top: 0%;
+  left: 0%;
+  filter: blur(25px);
+  animation-name: gooey1;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes gooey1 {
+  from {
+    filter: blur(40px);
+    transform: translate(10%, -10%) skew(0);
+  }
+  to {
+    filter: blur(60px);
+    transform: translate(-10%, 10%) skew(-12deg);
+  }
+}
+
+#footer #gooey2 {
+  height: 25vw;
+  width: 25vw;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #ff2a00, #ff7700);
+  top: 30%;
+  right: 0%;
+  filter: blur(24px);
+  animation-name: gooey2;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes gooey2 {
+  from {
+    filter: blur(40px);
+    transform: translate(-10%, 10%) skew(0);
+  }
+  to {
+    filter: blur(60px);
+    transform: translate(10%, -10%) skew(12deg);
+  }
 }
